@@ -51,5 +51,9 @@ print(run.get_portal_url())
 
 
 # <delete>
+# only delete the workspace.
+ws.delete()
+
+# CAUTION: delete the workspace AND its associated assets including storage account, ACR, KeyVault and AppInsights.
 ws.delete(delete_dependent_resources=True)
 # </delete>
